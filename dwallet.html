@@ -42,6 +42,14 @@
                 <nav class="navbar navbar-expand justify-content-between u-header__navbar py-3">
                     <!-- Logo -->
                     <div class="col-4 col-sm-6 mobile_menu">
+                        <a>
+                            <img style=' position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: auto;
+                            right: 0;
+                            margin: auto;' width='70px' height="70px" src="assets/img/dwallet.png" alt="arisen Logo">
+                        </a>
                         <a class="navbar-brand u-header__navbar-brand" href="index.html" aria-label="Distributed Webs">
                             <center><img class="u-header__navbar-brand-default" height="50px" src="assets/img/logos/arisen.png" alt="arisen Logo"></center>
                             <img class="u-header__navbar-brand-mobile" width="150px" src="assets/img/logos/arisen.png" alt="arisen Logo">
@@ -214,8 +222,17 @@
     <script>
         function change() {
             let txt = document.getElementById('download_for');
-            txt.innerHTML = "Get Free RIX"
-            txt.href = 'https://join.dpeeps.com'
+            if(txt.innerHTML.search('Linux')) {
+                txt.href = 'https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/linux-dWallet-1.1.2-x86_64.AppImage'
+            } else if(txt.innerHTML === "Apple") {
+                txt.href = ' https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/mac-dWallet-1.1.2.dmg'
+            } else if (txt.innerHTML === 'Window') {
+                txt.href = 'https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/win-dWallet-1.1.2.exe'
+            }
+            setTimeout(function() {
+                    txt.innerHTML = "Get Free RIX"
+                    txt.href = 'https://join.dpeeps.com'
+                }, 2000)
             document.getElementById('platform_name_onclick').innerHTML = "Using dWallet is easy. Install dWallet and simply login with one of your Arisen private keys or use a program like PeepsID to automatically login" || "dWallet is the official wallet for Arisen's blockchain and the RIX cryptocurrency . dWallet is available on Windows, Linux, MacOS and Android."
             document.getElementById('platform_name_h1').innerHTML = "Thanks for downloading dWallet." || `dWallet For ${navigator.platform}`
             document.getElementById('download_for').onclick = function () {
