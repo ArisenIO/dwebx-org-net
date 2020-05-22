@@ -222,7 +222,7 @@
                 txt.href = 'https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/linux-dWallet-1.1.2-x86_64.AppImage'
             } else if(txt.innerHTML.indexOf('Linux') !== -1) {
                 txt.href = 'https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/mac-dWallet-1.1.2.dmg'
-            } else  if(txt.innerHTML.indexOf('Window') !== -1) {
+            } else  if(txt.innerHTML.indexOf('Win') !== -1) {
                 txt.href = 'https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/win-dWallet-1.1.2.exe'
             }
             setTimeout(function() {
@@ -245,7 +245,7 @@
             document.getElementById('download_for').innerHTML = `Download For MacOS`
             document.getElementById('platform_name').innerHTML = `dWallet For MacOS`
             document.getElementById('platform_name_h1').innerHTML = `dWallet For MacOS`
-        } else if(navigator.platform.indexOf('Window') !== -1) {
+        } else if(navigator.platform.indexOf('Win') !== -1) {
             document.getElementById('download_for').innerHTML = `Download For Windows`
             document.getElementById('platform_name').innerHTML = `dWallet For Windows`
             document.getElementById('platform_name_h1').innerHTML = `dWallet For Windows`
