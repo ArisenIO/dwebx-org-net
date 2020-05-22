@@ -42,14 +42,6 @@
                 <nav class="navbar navbar-expand justify-content-between u-header__navbar py-3">
                     <!-- Logo -->
                     <div class="col-4 col-sm-6 mobile_menu">
-                        <a>
-                            <img style=' position: absolute;
-                            top: 0;
-                            bottom: 0;
-                            left: auto;
-                            right: 0;
-                            margin: auto;' width='70px' height="70px" src="assets/img/dwallet.png" alt="arisen Logo">
-                        </a>
                         <a class="navbar-brand u-header__navbar-brand" href="index.html" aria-label="Distributed Webs">
                             <center><img class="u-header__navbar-brand-default" height="50px" src="assets/img/logos/arisen.png" alt="arisen Logo"></center>
                             <img class="u-header__navbar-brand-mobile" width="150px" src="assets/img/logos/arisen.png" alt="arisen Logo">
@@ -81,6 +73,9 @@
                     <div class="w-lg-60 text-center mx-lg-auto content_web">
                         <!-- Title -->
                         <div class="mb-4">
+                            <a>
+                                <img width='70px' height="70px" src="assets/img/dwallet.png" alt="arisen Logo">
+                            </a>
                             <h1 class="display-3 font-size-48--md-down font-weight-medium" id='platform_name_h1'></h1>
                             <p class="lead" id='platform_name_onclick'>dWallet is the official wallet for Arisen's blockchain and the RIX cryptocurrency . dWallet is available on Windows, Linux, MacOS and Android.</p>
                             <a class="btn btn-sm btn-primary " onclick="change()" id='download_for' href="https://github.com/arisenio/avote/releases" role="button" target="_blank">
@@ -220,8 +215,8 @@
 
     <!-- JS Plugins Init. -->
     <script>
+        let txt = document.getElementById('download_for');
         function change() {
-            let txt = document.getElementById('download_for');
             if(txt.innerHTML.search('Linux')) {
                 txt.href = 'https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/linux-dWallet-1.1.2-x86_64.AppImage'
             } else if(txt.innerHTML === "Mac") {
@@ -240,9 +235,21 @@
                     document.getElementById("download_for").href= txt.href;
             }
         }
-        document.getElementById('download_for').innerHTML = `Download For ${navigator.platform}`
-        document.getElementById('platform_name').innerHTML = `dWallet For ${navigator.platform}`
-        document.getElementById('platform_name_h1').innerHTML = `dWallet For ${navigator.platform}`
+
+        if(txt.innerHTML.search('Linux')) {
+            document.getElementById('download_for').innerHTML = `Download For LinuxOS`
+            document.getElementById('platform_name').innerHTML = `dWallet For LinuxOS`
+            document.getElementById('platform_name_h1').innerHTML = `dWallet For LinuxOS`
+        } else if(txt.innerHTML.search('Mac')) {
+            document.getElementById('download_for').innerHTML = `Download For MacOS`
+            document.getElementById('platform_name').innerHTML = `dWallet For MacOS`
+            document.getElementById('platform_name_h1').innerHTML = `dWallet For MacOS`
+        } else {
+            document.getElementById('download_for').innerHTML = `Download For Windows`
+            document.getElementById('platform_name').innerHTML = `dWallet For Windows`
+            document.getElementById('platform_name_h1').innerHTML = `dWallet For Windows`
+        }
+
          axios.get('https://nv6khovry9.execute-api.us-east-1.amazonaws.com/dev/rsn_price_from_bts')
             .then(function (response) {
             document.getElementById('rix-price').innerHTML = `RIX Price : $ ${parseFloat(response.data.data.USD.price).toFixed(4)}`;
