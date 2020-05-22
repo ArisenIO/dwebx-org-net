@@ -215,13 +215,14 @@
 
     <!-- JS Plugins Init. -->
     <script>
-        let txt = document.getElementById('download_for');
+
         function change() {
-            if(txt.innerHTML.search('Linux')) {
+            let txt = document.getElementById('download_for');
+            if(txt.innerHTML.indexOf('Mac') !== -1) {
                 txt.href = 'https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/linux-dWallet-1.1.2-x86_64.AppImage'
-            } else if(txt.innerHTML === "Mac") {
-                txt.href = ' https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/mac-dWallet-1.1.2.dmg'
-            } else if (txt.innerHTML === 'Window') {
+            } else if(txt.innerHTML.indexOf('Linux') !== -1) {
+                txt.href = 'https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/mac-dWallet-1.1.2.dmg'
+            } else  if(txt.innerHTML.indexOf('Window') !== -1) {
                 txt.href = 'https://github.com/ArisenIO/dWallet-desktop/releases/download/1.1.2/win-dWallet-1.1.2.exe'
             }
             setTimeout(function() {
@@ -236,20 +237,22 @@
             }
         }
 
-        if(txt.innerHTML.search('Linux')) {
+        if(navigator.platform.indexOf('Linux') !== -1) {
             document.getElementById('download_for').innerHTML = `Download For LinuxOS`
             document.getElementById('platform_name').innerHTML = `dWallet For LinuxOS`
             document.getElementById('platform_name_h1').innerHTML = `dWallet For LinuxOS`
-        } else if(txt.innerHTML.search('Mac')) {
+        } else if(navigator.platform.indexOf('Mac') !== -1) {
             document.getElementById('download_for').innerHTML = `Download For MacOS`
             document.getElementById('platform_name').innerHTML = `dWallet For MacOS`
             document.getElementById('platform_name_h1').innerHTML = `dWallet For MacOS`
-        } else {
+        } else if(navigator.platform.indexOf('Window') !== -1) {
             document.getElementById('download_for').innerHTML = `Download For Windows`
             document.getElementById('platform_name').innerHTML = `dWallet For Windows`
             document.getElementById('platform_name_h1').innerHTML = `dWallet For Windows`
         }
-
+        // document.getElementById('download_for').innerHTML = `Download For ${navigator.platform}`
+        // document.getElementById('platform_name').innerHTML = `dWallet For ${navigator.platform}`
+        // document.getElementById('platform_name_h1').innerHTML = `dWallet For ${navigator.platform}`
          axios.get('https://nv6khovry9.execute-api.us-east-1.amazonaws.com/dev/rsn_price_from_bts')
             .then(function (response) {
             document.getElementById('rix-price').innerHTML = `RIX Price : $ ${parseFloat(response.data.data.USD.price).toFixed(4)}`;
