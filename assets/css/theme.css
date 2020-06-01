@@ -8,7 +8,7 @@
 /*------------------------------------
   Default Styles
 ------------------------------------*/
-@import url('//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,700;1,700&display=swap');
 
 main {
     position: relative;
@@ -4545,6 +4545,19 @@ h2.modal-title {
     background: #fff;
     border-top: 1px solid #e3e6f0;
 }
+.social-icon li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 2%;
+    font-size: 15px;
+    border-right: 1px solid #646f79;
+}
+.social-icon {
+    text-align: center;
+}
+.social-icon li a {
+    color: #646f79 !important;
+}
 
 
 /*------------------------------------
@@ -6604,7 +6617,7 @@ h2.modal-title {
 
 @media (min-width: 576px) { /*commnet open by me */ 
     .position-absolute-bottom-0--sm {
-        position: absolute;
+        position: relative;
         right: 0;
         bottom: 0;
         left: 0;
