@@ -6,9 +6,9 @@
 
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
-    <meta name="title" content="Arisen | The Decentralized Data Center | A Peeps Project">
+    <meta name="title" content="dWeb - The Decentralized Web">
 
-    <meta name="description" content="Arisen is a decentralized data center and software development platform for building decentralized applications. It is also used to form the world's first truly decentralized web and home to the RISE (RIX) cryptocurrency.">
+    <meta name="description" content="The decentralized web is an all-new web where end-users are in control of their own data, the community polices the websites, apps and content distributed on top of it, hackers are rendered useless and where the users and developers of the Internet can finally have their freedom back - by design.">
 
     <meta name="keywords" content="arisen, arisen blockchain, blockchain, eosio forks, rix currency, rise currency, rix, rise, dweb, arisen computer">
 
@@ -19,7 +19,8 @@
 
     <!-- Google Fonts -->
     <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
 
@@ -38,23 +39,46 @@
     <header id="header" class="u-header u-header--abs-top">
         <div class="u-header__section bg-transparent border-0">
             <div id="logoAndNav" class="container-fluid">
+            
                 <!-- Nav -->
                 <nav class="navbar navbar-expand justify-content-between u-header__navbar py-3">
                     <!-- Logo -->
-                    <div class="col-4 col-sm-6 mobile_menu">
+                    <div class="col-4 col-sm-2 mobile_menu">
                         <a class="navbar-brand u-header__navbar-brand" href="index.html" aria-label="Distributed Webs">
-                            <center><img class="u-header__navbar-brand-default" height="50px" src="assets/img/logos/arisen.png" alt="arisen Logo"></center>
+                            <center><img class="u-header__navbar-brand-default" height="50px" src="assets/img/logos/dweb-logo.png" alt="arisen Logo"></center>
                             <img class="u-header__navbar-brand-mobile" width="150px" src="assets/img/logos/arisen.png" alt="arisen Logo">
                         </a>
                     </div>
                     <!-- End Logo -->
-
+                    
+                    <!-- Desktop Navbar -->
+                    <ul class="col-sm-7 nav navbar-nav desktop-nav" id="myNavbar">
+                        <li><a href="https://peepsx.com/peeros.html">PeerOS</a></li>
+                        <li><a href="https://peepsid.com">PeepsID</a></li>
+                        <li><a href="https://dbrowser.com">dBrowser</a></li>
+                        <li><a href="https://peepsx.com/dwallet.html">dWallet</a></li>
+                        <li><a href="https://dsocial.network">dSocial</a></li>
+                        <li><a href="https://dsearch.network">dSearch</a></li>
+                        <li><a href="https://dnames.network">dNames</a></li>
+                        <li><a href="https://dwebx.org">dWeb</a></li>
+                        <li class="active"><a href="https://arisen.network">Developers</a></li>
+                    </ul>
+                    <!-- Desktop End Navbar -->
+                   
+                    
                     <!-- Button -->
-                    <div class="col-8 col-sm-6 text-right mobile_menu">
+                    <div class="col-8 col-sm-3 text-right mobile_menu">
                         <span id="rix-price" class="rsn-price"></span>
-                        <a class="btn btn-sm btn-primary" href="https://signup.arisen.network" role="button" target="_blank">
-                            Create Account
+                        <a class="btn btn-sm btn-primary" href="https://peepsx.com/fund.html" style='background-color: rgb(71,116,182); border-color: rgb(71,116,182)' role="button" target="_blank">
+                            Help Fund The Revolution
                         </a>
+                        <nav class="navbar-default">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>                        
+                            </button>
+                        </nav>
                     </div>
                     <!-- End Button -->
                 </nav>
@@ -73,14 +97,14 @@
                     <div class="w-lg-60 text-center mx-lg-auto content_web">
                         <!-- Title -->
                         <div class="mb-4">
-                            <h1 class="display-3 font-size-48--md-down font-weight-medium">The Decentralized Data Center</h1>
-                            <p class="lead">At Peeps, we developed Arisen to be a P2P global network of computers, designed to form not only a decentralized data center but also a platform for developing world-changing dApps. Today it has been used to create the world's first truly decentralized web, where companies like Peeps are building the decentralized banking systems and social networks of the future. Join us in our mission to decentralizing everything and launch a freedom revolution.
+                            <h1 class="display-3 font-size-48--md-down font-weight-medium" style='width: max-content;'>the decentralized web</h1>
+                            <p class="lead">The decentralized web is an all-new web where end-users are in control of their own data, the community polices the websites, apps and content distributed on top of it, hackers are rendered useless and where the users and developers of the Internet can finally have their freedom back - by design. Starting moving your websites over to the dWeb and let's make the web great again, together.
                             </p>
-                            <a class="btn btn-sm btn-primary " href="https://docs.arisen.network" role="button" target="_blank">
-                                View Docs </a>
+                            <a class="btn btn-sm btn-primary" style='background-color: rgb(71,116,182); border-color: rgb(71,116,182)' href=" https://dbrowser.com" role="button" target="_blank">
+                                Start Browsing The dWeb </a>
 
-                            <a class="btn btn-sm btn-primary" href="https://data.arisen.network" role="button" target="_blank">
-                                Explore Data Center </a>
+                            <a class="btn btn-sm btn-primary" style='background-color: rgb(71,116,182); border-color: rgb(71,116,182)' href="https://github.com/distributedweb/dweb-cli/releases" role="button" target="_blank">
+                                Download dWebCLI</a>
 
                         </div>
                         <!-- End Title -->
@@ -118,24 +142,23 @@
         <div class="footer_link" >
             <ul class="navbar">
                 <li>
-                <a href="dwallet" target="_blank">dWallet</a>
+                <a href="https://docs.arisen.network" target="_blank">Docs</a>
                 </li>
                 <li>
-                <a href="https://github.com/arisenio/arisen" target="_blank">Source Code</a>
+                <a href="https://github.com/distributedweb" target="_blank">Source</a>
                 </li>
                 <li>
-                <a href=" https://explorer.arisen.network" target="_blank">Explore Network</a>
+                <a href="https://dbrowser.com" target="_blank">dBrowser</a>
                 </li>
                 <li>
-                <a href="https://docs.arisen.network" target="_blank">Developer Docs</a>
+                <a href="https://dnames.network" target="_blank">dNames</a>
+                </li>
+                <li>
+                <a href="https://dsearch.network" target="_blank">dSearch</a>
                 </li>
                 <li style="border-right: none;">
-                <a href="https://github.com/arisenio/arisenid-desktop/releases" target="_blank">Download ArisenID</a>
-                </li>
-                <!-- <li style="border-right: none;">
-                <a href="https://github.com/arisen/@arisen/" target="_blank">AirDrop</a>
-                </li> -->
-                
+                    <a href="https://arisen.network" target="_blank">Arisen</a>
+                    </li>
             </ul>
             <div class="social-icon">
                 <li>
@@ -150,10 +173,20 @@
             </div>
         </div>
         <div class="container text-center space-1">
-            <p class="small mb-0">&copy 2020 The Peeps Labs. All rights reserved.</p>
+            <p class="small mb-0">&copy 2020 PeepsLabs. All rights reserved.</p>
+        </div>
+        <div class="container text-center space-1">
+            <p class="small mb-0">&copy 2020 PeepsLabs. All rights reserved.</p>
+            <p class="powered-by small mb-0">
+                Powered by <a href="https://peepsx.com" target="_blank"><img src="assets/img/logos/arisen-icon.png" alt="peeps-logo"></a> made In <img src="assets/img/logos/american-flag.jpg" style="height: 27px; width: 50px" alt="">
+            </p>
         </div>
     </footer>
     <!-- ========== END FOOTER ========== -->
+    <div class="u-sticky-footer">
+        <img src="assets/img/logos/arisen-icon.png" alt="dweb-logo">
+        <p>You can view this website as a dSite on the dWeb at <a href="https://peepsx.com">dweb://arisen.network</a></p>
+    </div>
 
     <!-- ========== SECONDARY CONTENTS ========== -->
     <!-- Subscribe for Updates Modal Window -->

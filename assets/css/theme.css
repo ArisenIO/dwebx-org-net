@@ -7402,3 +7402,64 @@ span{
     font-family: Montserrat;
     font-weight: 100 !important;
 }
+/*------------------------------------
+  Desktop-nav-bar
+------------------------------------*/
+
+.desktop-nav li a {
+    padding: 10px 10px;
+}
+@media (min-width: 576px){
+    .u-header__navbar-brand-mobile {
+        display: none !important;
+    }
+    nav.navbar-default {
+        display: none;
+    }
+    .desktop-nav li {
+        display: inline-block;
+    }
+}
+@media (max-width: 1200px){
+    .desktop-nav li a {
+        padding: 10px 5px;
+    }
+}
+@media (max-width: 992px){
+    .desktop-nav li a {
+            line-height: 10px;
+            font-size: 13px;
+            padding: 5px 3px;
+    }
+}
+
+/*------------------------------------
+  Mobile-nav-bar
+------------------------------------*/
+@media (max-width: 576px){
+    .desktop-nav li {
+        width: 100%;
+        text-align: center;
+    }
+    .desktop-nav li a {
+        line-height: 10px;
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+    .desktop-nav {
+        position: absolute;
+        top: 4.5em;
+        margin: 0;
+        padding: 0;
+    }
+    nav.navbar-default {
+        position: absolute;
+        right: -8px;
+        top: -8px;
+    }
+}
+@media (max-width: 370px){
+    nav.navbar-default {
+        top: 11px;
+    }
+}
